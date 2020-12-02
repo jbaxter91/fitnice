@@ -1,3 +1,5 @@
+![fit-nice](https://user-images.githubusercontent.com/67088604/100931103-ea945980-349e-11eb-895a-082c83b44674.png)
+
 # Fit-Nice ![MIT License](https://img.shields.io/badge/License-MIT-Green)
 
 ## Description
