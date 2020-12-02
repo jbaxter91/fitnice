@@ -40,6 +40,39 @@ app.get("/exercise", (req,res) => {
     });
   });
   
+  app.post("/api/workouts", (req,res) => {
+    db.Exercise.create({})
+    .then(dbExercise => {
+      res.json(dbExercise);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+  });
+  
+  app.put("/api/workouts/:id", ({ body, params }, res) => {
+    db.Exercise.findByIdAndUpdate(params.id, { $push: { exercises: body } },{new:true})
+    .then(dbExercise => {
+      res.json(dbExercise);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+  });
+  
+  app.get("/stats", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/stats.html"))
+  });
+  
+  app.get("/api/workouts/range", (req, res) => {
+    db.Exercise.find({})
+      .then(dbExercise => {
+        res.json(dbExercise);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+  });
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
