@@ -33,6 +33,6 @@ GitHub: https://www.github.com/jbaxter91
 
 Email: jbaxter@a-zdarts.com
 ## Deployed  
-  DEPLOYED LINK
+  https://jbaxter91-fitnice.herokuapp.com/
 ## License
 MIT License: A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
