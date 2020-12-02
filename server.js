@@ -26,7 +26,20 @@ mongoose.connect(
   }
 );
 
-
+app.get("/exercise", (req,res) => {
+    res.sendFile(path.join(__dirname, "./public/exercise.html"))
+  });
+  
+  app.get("/api/workouts", (req,res) => {
+    db.Exercise.find({})
+    .then(dbExercise => {
+      res.json(dbExercise);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+  });
+  
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
